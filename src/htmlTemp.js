@@ -11,12 +11,6 @@ const generateHTML = function (teamString) {
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
-   .container-body {
-       display: flex;
-       justify-content: space-evenly;
-   }
-
 </style>
 
 </head>
@@ -29,7 +23,7 @@ const generateHTML = function (teamString) {
 </div>
 </div>
 
-<div class="container-body">
+<div class="container-body container-fluid">
    <div class="row">
         ${teamString} 
     </div>
@@ -44,23 +38,27 @@ const generateHTML = function (teamString) {
 
 const generateCard = function (arr) {
 
+    let positionIcon;
     let roleInfo;
 
     if (arr.title === "Manager") {
+        positionIcon = `<i class="fas fa-mug-hot"></i>`
         roleInfo = `Office Number: ${arr.officeNumber}`
     } else if (arr.title === "Engineer") {
+        positionIcon = `<i class="fas fa-glasses"></i>`
         roleInfo = `GitHub Username: <a href="https://github.com/${arr.github}" target="_blank">${arr.github}</a>`
     } else if (arr.title === "Intern") {
+        positionIcon = `<i class="fas fa-user-graduate"></i>`
         roleInfo = `School: ${arr.school}`
     }
 
     return `
     
-<div class="col-sm">    
+<div class="col-md-4 col-sm-6 col-12 col-lg-3">    
     <div class="card shadow-lg mb-5 bg-white rounded">
         <div class="card-header bg-primary">
-            <h4 class="text-white">${arr.name}</h4>  
-            <h4 class="text-white"><i class="far fa-user"></i> ${arr.title}</h4>
+            <h4 class="text-white text-center">${arr.name}</h4>  
+            <h4 class="text-white text-center">${positionIcon}</i> ${arr.title}</h4>
         </div>
 
         <div class="card-body">
