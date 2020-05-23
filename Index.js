@@ -1,3 +1,4 @@
+// Initiate all the requirements
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
@@ -7,6 +8,7 @@ const Intern = require("./lib/Intern");
 const html = require("./src/htmlTemp");
 const validator = require("email-validator");
 
+// Set up Async functions
 const writeFileAsync = util.promisify(fs.writeFile);
 const appendFileAsync = util.promisify(fs.appendFile);
 
@@ -17,6 +19,7 @@ console.clear();
 console.log("---------------------------------------------");
 console.log("Team Portfolio Generator by Joseph DeWoody")
 
+// Main function to run application
 async function main() {
     try {
         await prompt()
@@ -44,6 +47,7 @@ async function main() {
     }
 };
 
+// Inquirer prompts to gather user generated data
 async function prompt() {
     let responseDone = "";
 
@@ -71,6 +75,7 @@ async function prompt() {
                     type: "input",
                     name: "email",
                     message: "Enter the employee's email address: ",
+                    // Validate that it is an email using email-validator
                     validate: function validateEmail(name){
                         return validator.validate(name);
                     }
@@ -99,6 +104,7 @@ async function prompt() {
                         },
                     }, ]);
 
+                    // Add to team Array
                     const engineer = new Engineer(response.name, response.id, response.email, response2.x);
                     teamArray.push(engineer);
 
@@ -112,6 +118,7 @@ async function prompt() {
                         },
                     }, ]);
 
+                    // Add to team Array
                     const intern = new Intern(response.name, response.id, response.email, response2.x);
                     teamArray.push(intern);
 
@@ -125,6 +132,7 @@ async function prompt() {
                         },
                     }, ]);
 
+                    // Add to team Array
                     const manager = new Manager(response.name, response.id, response.email, response2.x);
                     teamArray.push(manager);
                }
@@ -146,4 +154,5 @@ async function prompt() {
      } while (responseDone.finish === "Yes");
 }
 
+// Run Application
 main();

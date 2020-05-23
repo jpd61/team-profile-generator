@@ -1,3 +1,4 @@
+// Generates page structure using Bootstrap and Fontawesome
 const generateHTML = function (teamString) {
 
     return `<!DOCTYPE html>
@@ -36,9 +37,12 @@ const generateHTML = function (teamString) {
 
 }
 
+// Generates cards for each employee class based on user input in Inquirer
 const generateCard = function (arr) {
 
+    // Fontawesome Icons change based on role
     let positionIcon;
+    // Criteria for display
     let roleInfo;
 
     if (arr.title === "Manager") {
