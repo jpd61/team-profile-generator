@@ -45,7 +45,7 @@ async function main() {
     } catch (err) {
         return console.log(err);
     }
-};
+}
 
 // Inquirer prompts to gather user generated data
 async function prompt() {
