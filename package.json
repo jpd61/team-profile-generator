@@ -21,7 +21,9 @@
   "homepage": "https://github.com/jpd61/team-profile-generator#readme",
   "dependencies": {
     "inquirer": "^7.1.0",
-    "jest": "^26.0.1",
     "node": "^14.2.0"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
   }
 }

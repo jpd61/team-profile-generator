@@ -31,8 +31,8 @@ test("Get name", () => {
 
 test("Get ID", () => {
     const testValue = 61;
-    cosnt emp = new Employee("Jose", testValue);
-    expect(e.getId()).toBe(testValue);
+    const emp = new Employee("Jose", testValue);
+    expect(emp.getId()).toBe(testValue);
 });
 
 test("Get Email", () => {
