@@ -1,5 +1,6 @@
 
-<h1 align="center">Team Profile Generator Using Node.js and Object-Oriented Programming (OOP) and Test-Driven Development (TDD) 👋</h1>
+<h1 align="center">Team Profile Generator Using Node.js</h1>
+<h1 align="center">Object-Oriented Programming (OOP) and Test-Driven Development (TDD) 👋</h1>
   
 <p align="center">
     <img src="https://img.shields.io/github/repo-size/jpd61/team-profile-generator" />
@@ -26,7 +27,7 @@
   
 💻 Below is the gif showing the functionality of the application:
   
-![DeWoody Team Profile Generator](./src/funcionality-gif.gif)
+![DeWoody Team Profile Generator](./src/functionality-gif.gif)
   
 🎥 The full movie file showing functionality of the application can be found [here](./src/functionality-video.webm)  
   
