@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/jpd61/team-profile-generator#readme",
   "dependencies": {
+    "email-validator": "^2.0.4",
     "inquirer": "^7.1.0",
     "joi": "^14.3.1",
     "node": "^14.2.0"

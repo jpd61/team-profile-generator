@@ -5,6 +5,7 @@ const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const html = require("./src/htmlTemp");
+const validator = require("email-validator");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 const appendFileAsync = util.promisify(fs.appendFile);
@@ -59,8 +60,11 @@ async function prompt() {
                     type: "input",
                     name: "email",
                     message: "Enter the employee's email address: ",
-                    validate: function validateName(name){
-                        return name !== '';
+                    // validate: function validateName(name){
+                    //     return name !== '';
+                    // },
+                    validate: function validateEmail(name){
+                        return validator.validate(name);
                     }
                 },
                 {
