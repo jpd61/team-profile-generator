@@ -13,6 +13,7 @@ const appendFileAsync = util.promisify(fs.appendFile);
 let teamArray = [];
 let teamString = ``;
 
+console.clear();
 console.log("---------------------------------------------");
 console.log("Team Portfolio Generator by Joseph DeWoody")
 
@@ -26,7 +27,17 @@ async function main() {
 
         let finalHtml = html.generateHTML(teamString)
 
-        writeFileAsync("./dist/index.html", finalHtml)
+        console.clear();
+        console.log("---------------------------------------------");
+        console.log("Generating index.html file....");
+        console.log("---------------------------------------------");
+
+        writeFileAsync("./dist/index.html", finalHtml);
+
+        console.clear();
+        console.log("---------------------------------------------");
+        console.log("index.html file created successfully");
+        console.log("---------------------------------------------");
 
     } catch (err) {
         return console.log(err);
@@ -60,9 +71,6 @@ async function prompt() {
                     type: "input",
                     name: "email",
                     message: "Enter the employee's email address: ",
-                    // validate: function validateName(name){
-                    //     return name !== '';
-                    // },
                     validate: function validateEmail(name){
                         return validator.validate(name);
                     }
