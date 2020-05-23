@@ -16,5 +16,5 @@ test("Get Role", () => {
 test("Get Office Number", () => {
     const testValue = 61;
     const emp = new Manager("Jose", 1, "test@valormm.com", testValue);
-    expect(emp.getOfficeNumber()).toBe(testValue):
+    expect(emp.getOfficeNumber()).toBe(testValue);
 });
