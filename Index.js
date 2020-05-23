@@ -12,6 +12,9 @@ const appendFileAsync = util.promisify(fs.appendFile);
 let teamArray = [];
 let teamString = ``;
 
+console.log("---------------------------------------------");
+console.log("Team Portfolio Generator by Joseph DeWoody")
+
 async function main() {
     try {
         await prompt()
@@ -34,21 +37,31 @@ async function prompt() {
 
     do {
         try {
+            console.log("---------------------------------------------");
             let response = await inquirer.prompt([
                 {
                     type: "input",
                     name: "name",
-                    message: "What is the employee's name?: "
+                    message: "What is the employee's name?: ",
+                    validate: function validateName(name){
+                        return name !== '';
+                    }
                 },
                 {
                     type: "input",
                     name: "id",
-                    message: "Enter the employee's ID: "
+                    message: "Enter the employee's ID: ",
+                    validate: function validateName(name){
+                        return name !== '';
+                    }
                 },
                 {
                     type: "input",
                     name: "email",
-                    message: "Enter the employee's email address: "
+                    message: "Enter the employee's email address: ",
+                    validate: function validateName(name){
+                        return name !== '';
+                    }
                 },
                 {
                     type: "list",
@@ -69,6 +82,9 @@ async function prompt() {
                          type: "input",
                          name: "x",
                          message: "What is the employee's github username?:",
+                         validate: function validateName(name){
+                            return name !== '';
+                        },
                     }, ]);
 
                     const engineer = new Engineer(response.name, response.id, response.email, response2.x);
@@ -79,6 +95,9 @@ async function prompt() {
                          type: "input",
                          name: "x",
                          message: "What school is the employee attending?:",
+                         validate: function validateName(name){
+                            return name !== '';
+                        },
                     }, ]);
 
                     const intern = new Intern(response.name, response.id, response.email, response2.x);
@@ -89,6 +108,9 @@ async function prompt() {
                          type: "input",
                          name: "x",
                          message: "What is the employee's office number?:",
+                         validate: function validateName(name){
+                            return name !== '';
+                        },
                     }, ]);
 
                     const manager = new Manager(response.name, response.id, response.email, response2.x);
