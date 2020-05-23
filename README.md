@@ -1,6 +1,6 @@
 
 <h1 align="center">Team Profile Generator Using Node.js</h1>
-<h1 align="center">Object-Oriented Programming (OOP) and Test-Driven Development (TDD) 👋</h1>
+<h2 align="center">Object-Oriented Programming (OOP) and Test-Driven Development (TDD) 👋</h2>
   
 <p align="center">
     <img src="https://img.shields.io/github/repo-size/jpd61/team-profile-generator" />
@@ -95,7 +95,7 @@ Run the following command at th root of your project and answer the prompted que
 
 `npm install jest --save-dev`
 
-Testing is done with jest and contains testing for all four Classes: Employee, Manager, Engineer and Intern.
+Testing is done with jest and contains testing for all four Classes: `Employee`, `Manager`, `Engineer` and `Intern`.
 
 ## Contributing
 :octocat: [Joseph DeWoody](https://github.com/jpd61)
